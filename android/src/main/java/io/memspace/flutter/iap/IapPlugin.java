@@ -1,7 +1,7 @@
 package io.memspace.flutter.iap;
 
 import android.annotation.SuppressLint;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import com.android.billingclient.api.*;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
