@@ -10,7 +10,7 @@ import 'package:flutter/foundation.dart';
 /// Information about a product you previously registered in App Store Connect.
 ///
 /// SKProduct objects are returned as part of an [SKProductsResponse].
-class SKProduct extends Diagnosticable {
+class SKProduct with Diagnosticable {
   /// The string that identifies the product to the Apple App Store.
   final String productIdentifier;
 
@@ -123,7 +123,7 @@ class SKProduct extends Diagnosticable {
 ///
 /// Product discount information is retrieved from the Apple App Store,
 /// and is determined by the discounts that you set up in App Store Connect
-class SKProductDiscount extends Diagnosticable {
+class SKProductDiscount with Diagnosticable {
   /// The discount price of the product in the local currency.
   final String price;
 
@@ -184,7 +184,7 @@ class SKProductDiscount extends Diagnosticable {
 /// A subscription period is a duration of time defined as some number of units.
 /// For example, a subscription period of two weeks has a unit of [PeriodUnit.week],
 /// and a [numberOfUnits] equal to 2.
-class SKProductSubscriptionPeriod extends Diagnosticable {
+class SKProductSubscriptionPeriod with Diagnosticable {
   /// The number of units per subscription period.
   final int numberOfUnits;
 
@@ -273,7 +273,7 @@ SKPaymentTransactionState _decodeTransactionState(String value) {
 }
 
 /// An App Store response to a request for information about a list of products.
-class SKProductsResponse extends Diagnosticable {
+class SKProductsResponse with Diagnosticable {
   /// A list of products, one product for each valid product identifier
   /// provided in the original request.
   final List<SKProduct> products;
@@ -309,7 +309,7 @@ class SKProductsResponse extends Diagnosticable {
 /// processing the payment. Completed transactions provide a receipt and
 /// transaction identifier that your app can use to save a permanent record
 /// of the processed payment.
-class SKPaymentTransaction extends Diagnosticable {
+class SKPaymentTransaction with Diagnosticable {
   /// The payment for the transaction.
   ///
   /// Each payment transaction is created in response to a payment that your
@@ -455,7 +455,7 @@ class SKPaymentTransaction extends Diagnosticable {
 /// When all downloads are complete, you finish the transaction. After the transaction
 /// is finished, the download objects cannot be queued to the payment queue and any
 /// URLs to the downloaded content are invalid.
-class SKDownload extends Diagnosticable {
+class SKDownload with Diagnosticable {
   /// Each piece of downloadable content associated with a product has its own
   /// unique identifier.
   ///
@@ -696,7 +696,7 @@ class SKError {
 ///
 /// A payment object encapsulates a string that identifies a particular
 /// product and the quantity of those items the user would like to purchase.
-class SKPayment extends Diagnosticable {
+class SKPayment with Diagnosticable {
   /// A string used to identify a product that can be purchased from within
   /// your application.
   final String productIdentifier;

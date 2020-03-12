@@ -4,7 +4,7 @@
 
 part of billing_client;
 
-class Purchase extends Diagnosticable {
+class Purchase with Diagnosticable {
   /// Unique order identifier for the transaction.
   final String orderId;
 
@@ -73,7 +73,7 @@ class Purchase extends Diagnosticable {
 }
 
 /// Represents an in-app product's or subscription's listing details.
-class SkuDetails extends Diagnosticable {
+class SkuDetails with Diagnosticable {
   /// The description of this product.
   final String description;
 
